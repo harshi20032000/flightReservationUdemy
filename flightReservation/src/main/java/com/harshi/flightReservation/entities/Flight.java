@@ -8,7 +8,7 @@ import lombok.Data;
 
 @Entity
 @Data
-public class Flight extends AbstractEntity{
+public class Flight extends AbstractEntity {
 	private String flightNumber;
 	private String operatingAirlines;
 	private String departureCity;

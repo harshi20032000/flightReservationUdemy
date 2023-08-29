@@ -3,6 +3,7 @@ package com.harshi.flightReservation.entities;
 import jakarta.persistence.Entity;
 import jakarta.persistence.OneToOne;
 import lombok.Data;
+
 @Entity
 @Data
 public class Reservation extends AbstractEntity {

@@ -2,9 +2,10 @@ package com.harshi.flightReservation.entities;
 
 import jakarta.persistence.Entity;
 import lombok.Data;
+
 @Entity
 @Data
-public class Passenger extends AbstractEntity{
+public class Passenger extends AbstractEntity {
 	private String firstName;
 	private String middleName;
 	private String lastName;
