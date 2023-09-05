@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Complete Reservation</title>
+</head>
+
+<body>
+	<pre>
+		<h2>Complete Reservation: </h2>
+	Airlines :	<td th:text="${flight.operatingAirlines}"></td>
+	From :	<td th:text="${flight.departureCity}"></td>
+	To :	<td th:text="${flight.arrivalCity}"></td>
+	Date of departure :	<td th:text="${flight.dateOfDeparture}"></td>
+	Time of Departure :	<td th:text="${flight.estimatedDepartureTime}"></td>
+	
+	
+	
+	<form action="completeReservation" method="post">
+		<pre>
+			<h2>Enter Passenger Details: </h2>
+		First Name: <input type="text" name="firstName">
+		Middle Name: <input type="text" name="middleName">
+		Last Name: <input type="text" name="lastName">
+		Email : <input type="text" name="email">
+		Phone: <input type="text" name="phone">
+		<input type="submit" value="confirm">
+		</pre>
+
+
+
+</body>
+
+</html>

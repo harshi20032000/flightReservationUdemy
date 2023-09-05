@@ -24,6 +24,8 @@ public class FlightController {
 		List<Flight> flights = flightRepository.findFlights(from, to, dateOfDeparture);
 		modelMap.addAttribute("flights", flights);
 		return "login/displayFlights";
-		
-	}
+		}
+	
+	
+	
 }
