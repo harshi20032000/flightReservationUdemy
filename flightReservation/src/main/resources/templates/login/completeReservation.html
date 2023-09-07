@@ -7,27 +7,24 @@
 </head>
 
 <body>
-	<pre>
-		<h2>Complete Reservation: </h2>
-	Airlines :	<td th:text="${flight.operatingAirlines}"></td>
-	From :	<td th:text="${flight.departureCity}"></td>
-	To :	<td th:text="${flight.arrivalCity}"></td>
-	Time of Departure :	<td th:text="${flight.estimatedDepartureTime}"></td>
-	
+	<h2>Complete Reservation: </h2>
+	Airlines : <td th:text="${flight.operatingAirlines}"></td>
+	From : <td th:text="${flight.departureCity}"></td>
+	To : <td th:text="${flight.arrivalCity}"></td>
+	Time of Departure : <td th:text="${flight.estimatedDepartureTime}"></td>
+
 	<form action="completeReservation" method="post">
+		<h2>Enter Passenger Details: </h2>
 		<pre>
-			<h2>Enter Passenger Details: </h2>
-		First Name: <input type="text" name="firstName">
-		Middle Name: <input type="text" name="middleName">
-		Last Name: <input type="text" name="lastName">
-		Email : <input type="text" name="email">
-		Phone: <input type="text" name="phone">
-		<input type="hidden" name="flightId" value="${flight.id}">
+		FlightId: <input type="text" name="flightId" th:value="${flight.id}" readonly>
+		First Name: <input type="text" name="firstName" />
+		Middle Name: <input type="text" name="middleName" />
+		Last Name: <input type="text" name="lastName" />
+		Email : <input type="text" name="email" />
+		Phone: <input type="text" name="phone" />
 		<input type="submit" value="confirm">
 		</pre>
-
-
-
+	</form>
 </body>
 
 </html>

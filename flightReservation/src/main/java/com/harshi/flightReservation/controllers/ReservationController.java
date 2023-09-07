@@ -26,6 +26,9 @@ public class ReservationController {
 	
 	@RequestMapping(value="/completeReservation")
 	public String completeReservation(@ModelAttribute Passenger passenger,Long flightId) {
+		long id=(flightId);
+		Flight flight = flightRepository.findById(id).get();
+		
 		String name=passenger.getFirstName()+" "+passenger.getLastName();
 		String email = passenger.getEmail();
 		return "login/showReservation";
