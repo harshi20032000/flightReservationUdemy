@@ -9,12 +9,17 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.harshi.flightReservation.entities.Flight;
 import com.harshi.flightReservation.entities.Passenger;
+import com.harshi.flightReservation.entities.Reservation;
 import com.harshi.flightReservation.repos.FlightRepository;
+import com.harshi.flightReservation.service.ReservationService;
 @Controller
 public class ReservationController {
 	
 	@Autowired
 	FlightRepository flightRepository;
+	
+	@Autowired
+	ReservationService reservationService;
 	
 	
 	@RequestMapping(value="/showCompleteReservation")
@@ -25,13 +30,12 @@ public class ReservationController {
 	
 	
 	@RequestMapping(value="/completeReservation")
-	public String completeReservation(@ModelAttribute Passenger passenger,Long flightId) {
-		long id=(flightId);
-		Flight flight = flightRepository.findById(id).get();
-		
-		String name=passenger.getFirstName()+" "+passenger.getLastName();
-		String email = passenger.getEmail();
-		return "login/showReservation";
+	public String completeReservation(@ModelAttribute Passenger passenger,Long flightId, ModelMap modelMap) {
+		Flight flightToBook = flightRepository.findById(flightId).get();
+		Reservation bookedFlight = reservationService.bookFlight(passenger, flightToBook);
+		modelMap.addAttribute("msg", "Reservation done succesfully");
+		modelMap.addAttribute("additionalMsg", bookedFlight.toString());
+		return "login/reservationConfirmationSummary";
 		
 	}
 

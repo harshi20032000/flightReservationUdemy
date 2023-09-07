@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Reservation Confirmed</title>
+	<style>
+		div {
+			width: 3px;
+			border: 2px solid seagreen;
+		}
+
+		div.a {
+			word-wrap: break-word;
+		}
+	</style>
+</head>
+
+<body>
+
+	<b th:text="${msg}"></b>
+	<h2>Reservation Summary</h2>
+	<div class="a" th:text="${additionalMsg}"></div>
+	
+
+
+</body>
+
+</html>

@@ -8,6 +8,17 @@ import lombok.Data;
 @Data
 public class Reservation extends AbstractEntity {
 	private Boolean checkedIn;
+	private int numOfBags;
+	@Override
+	public String toString() {
+		return "Reservation [checkedIn=" + checkedIn + ", numOfBags=" + numOfBags + ", passenger=" + passenger
+				+ ", flight=" + flight + "]";
+	}
+	@OneToOne
+	private Passenger passenger;
+	@OneToOne
+	private Flight flight;
+	
 	public Boolean getCheckedIn() {
 		return checkedIn;
 	}
@@ -32,9 +43,4 @@ public class Reservation extends AbstractEntity {
 	public void setFlight(Flight flight) {
 		this.flight = flight;
 	}
-	private int numOfBags;
-	@OneToOne
-	private Passenger passenger;
-	@OneToOne
-	private Flight flight;
 }
