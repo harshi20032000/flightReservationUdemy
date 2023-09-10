@@ -34,7 +34,7 @@ public class ReservationController {
 		Flight flightToBook = flightRepository.findById(flightId).get();
 		Reservation bookedFlight = reservationService.bookFlight(passenger, flightToBook);
 		modelMap.addAttribute("msg", "Reservation done succesfully");
-		modelMap.addAttribute("additionalMsg", bookedFlight.toString());
+		modelMap.addAttribute("reservation", bookedFlight);
 		return "login/reservationConfirmationSummary";
 		
 	}

@@ -3,16 +3,15 @@
 
 <head>
 	<meta charset="ISO-8859-1">
-	<title>Reservation Confirmed</title>
+	<title>Reservation Details</title>
 </head>
 
 <body>
-	<b th:text="${msg}"></b>
-	<h2>Reservation Summary</h2>
-	<h1>Flight Details</h1>
+	<h2>Flight Details</h2>
 	<pre>
 	Reservation Id : <td th:text="${reservation.id}"></td>
-	
+	Checked In : <td th:text="${reservation.checkedIn}"></td>
+	Number of Bags : <td th:text="${reservation.numOfBags}"></td>
 	<br>
 	Passenger : <td th:text="${reservation.passenger}"></td>
 	<br>
