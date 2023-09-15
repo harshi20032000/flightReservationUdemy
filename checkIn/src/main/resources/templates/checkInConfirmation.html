@@ -3,11 +3,11 @@
 
 <head>
 	<meta charset="ISO-8859-1">
-	<title>Reservation Details</title>
+	<title>Checkin Confirmation</title>
 </head>
 
 <body>
-	<h2>Flight Details</h2>
+	<h2>Checkin Successfull</h2>
 	<pre>
 	Reservation Id : <td th:text="${reservation.id}"></td>
 	Checked In : <td th:text="${reservation.checkedIn}"></td>
@@ -17,13 +17,7 @@
 	<br>
 	Flight : <td th:text="${reservation.flight}"></td>
 	<br>
-	<form action="completeCheckin" method="post">
-		
-		Number of Bags : <input type="text" name="numberOfBags" th:value="${reservation.numOfBags}"/>
-		<input type="hidden" name="reservationId" th:value="${reservation.id}"/>	
-		<input type="submit" value="Check In"/>
-		
-	</form>
+	
 	</pre>
 </body>
 

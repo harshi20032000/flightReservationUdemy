@@ -24,7 +24,7 @@ public class ReservationRestController {
 		return reservationService.getFlight(id);
 	}
 
-	@RequestMapping(value="/reservations", method = RequestMethod.POST)
+	@RequestMapping(value="/reservations/", method = RequestMethod.POST)
 	public Reservation updateReservation(@RequestBody ReservationUpdateDTO reservationUpdateRequest) {
 		return reservationService.updateFlight(reservationUpdateRequest);
 	}

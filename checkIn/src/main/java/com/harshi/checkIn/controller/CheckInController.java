@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.harshi.checkIn.integration.ReservationRestClient;
 import com.harshi.checkIn.integration.dto.Reservation;
+import com.harshi.checkIn.integration.dto.ReservationUpdateDTO;
 
 @Controller
 public class CheckInController {
@@ -25,6 +26,16 @@ public class CheckInController {
 		Reservation reservation = reservationRestClient.findResrvation(reservationId);
 		model.addAttribute("reservation", reservation);
 		return "displayReservationDetails";
+	}
+	@RequestMapping("/completeCheckin")
+	String completeCheckIn(@RequestParam Long reservationId, @RequestParam int numberOfBags, ModelMap modelMap) {
+		ReservationUpdateDTO updateRequest = new ReservationUpdateDTO();
+		updateRequest.setId(reservationId);
+		updateRequest.setCheckedIn(true);
+		updateRequest.setNumOfBags(numberOfBags);
+		Reservation updatedReservation = reservationRestClient.updateReservation(updateRequest );
+		modelMap.addAttribute("reservation", updatedReservation);
+		return "checkInConfirmation";
 	}
 
 }
