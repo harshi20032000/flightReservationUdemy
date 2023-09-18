@@ -52,7 +52,11 @@ public class ReservationServiceImpl implements ReservationService {
 		Reservation reservationToUpdate = reservationRepository.findById(reservationUpdateRequest.getId()).get();
 		reservationToUpdate.setCheckedIn(reservationUpdateRequest.isCheckedIn());
 		reservationToUpdate.setNumOfBags(reservationUpdateRequest.getNumOfBags());
-		return reservationRepository.save(reservationToUpdate);
+		Reservation updatedReservation = reservationRepository.save(reservationToUpdate);
+		String filepath = "C:\\Users\\Admin\\Documents\\Itinerary\\reservationUpdated"+updatedReservation.getId()+".pdf";
+		pdfGenerator.generateItinerary(updatedReservation, filepath);
+		emailUtil.sendItinerary(updatedReservation.getPassenger().getEmail(), filepath );
+		return updatedReservation;
 	}
 
 }

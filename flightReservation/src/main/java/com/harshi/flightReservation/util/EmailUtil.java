@@ -16,6 +16,11 @@ public class EmailUtil {
 	@Autowired
 	private JavaMailSender mailSender;
 	
+	/**
+	 * put logic to segregate saveReservation itnerary and updatereservation
+	 * itinerary mail should be more clear about what happened.
+	 */
+	
 	public void sendItinerary(String toAddress, String filePath) {
 		MimeMessage mimeMessage = mailSender.createMimeMessage();
 		try {
