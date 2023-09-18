@@ -9,6 +9,8 @@ import com.harshi.flightReservation.entities.Passenger;
 import com.harshi.flightReservation.entities.Reservation;
 import com.harshi.flightReservation.repos.PassengerRepository;
 import com.harshi.flightReservation.repos.ReservationRepository;
+import com.harshi.flightReservation.util.EmailUtil;
+import com.harshi.flightReservation.util.PdfGenerator;
 
 @Service
 public class ReservationServiceImpl implements ReservationService {
@@ -19,6 +21,12 @@ public class ReservationServiceImpl implements ReservationService {
 	@Autowired
 	ReservationRepository reservationRepository;
 	
+	@Autowired
+	PdfGenerator pdfGenerator;
+	
+	@Autowired
+	EmailUtil emailUtil;
+	
 	@Override
 	public Reservation bookFlight(Passenger passenger, Flight flight) {
 		Reservation reservation = new Reservation();
@@ -27,7 +35,11 @@ public class ReservationServiceImpl implements ReservationService {
 		/** Reservation will be checkedIn when the passenger checksIn
 		 * also number of bags will be set at that time */
 		reservation.setCheckedIn(false);
-		return reservationRepository.save(reservation);
+		Reservation savedReservation= reservationRepository.save(reservation);
+		String filepath = "C:\\Users\\Admin\\Documents\\Itinerary"+savedReservation.getId()+".pdf";
+		pdfGenerator.generateItinerary(savedReservation, filepath);
+		emailUtil.sendItinerary(passenger.getEmail(), filepath );
+		return savedReservation;
 	}
 
 	@Override
