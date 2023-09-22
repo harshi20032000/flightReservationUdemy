@@ -3,6 +3,8 @@ package com.harshi.flightReservation.controllers;
 import java.util.Date;
 import java.util.List;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.stereotype.Controller;
@@ -19,10 +21,14 @@ public class FlightController {
 	@Autowired
 	FlightRepository flightRepository;
 	
+	private static final Logger LOGGER = LoggerFactory.getLogger(UserController.class);
+	
 	@RequestMapping(value = "/findFlights", method=RequestMethod.POST)
 	public String findFlights(@RequestParam("from") String from, @RequestParam("to")String to, @RequestParam("dateOfDeparture") @DateTimeFormat(pattern="yyyy-MM-dd") Date dateOfDeparture, ModelMap modelMap) {
+		LOGGER.info("Inside findFlights() on FlightController");
 		List<Flight> flights = flightRepository.findFlights(from, to, dateOfDeparture);
 		modelMap.addAttribute("flights", flights);
+		LOGGER.info("Redirecting to displayFlights.html on flightController");
 		return "login/displayFlights";
 		}
 	
