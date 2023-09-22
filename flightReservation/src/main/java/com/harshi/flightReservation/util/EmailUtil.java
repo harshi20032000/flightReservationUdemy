@@ -5,6 +5,7 @@ import java.io.File;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.mail.javamail.JavaMailSender;
 import org.springframework.mail.javamail.MimeMessageHelper;
 import org.springframework.stereotype.Component;
@@ -17,13 +18,19 @@ import jakarta.mail.internet.MimeMessage;
 @Component
 public class EmailUtil {
 
+	@Value("${com.harshi.flightReservation.itinerary.email.body}")
+	private String EMAIL_BODY;
+
+	@Value("${com.harshi.flightReservation.itinerary.email.subject}")
+	private String EMAIL_SUBJECT;
+
 	@Autowired
 	private JavaMailSender mailSender;
 	
 	private static final Logger LOGGER = LoggerFactory.getLogger(UserController.class);
 	
 	/**
-	 * put logic to segregate saveReservation itnerary and updatereservation
+	 * put logic to segregate saveReservation itinerary and updatereservation
 	 * itinerary mail should be more clear about what happened.
 	 */
 	
@@ -33,8 +40,8 @@ public class EmailUtil {
 		try {
 			MimeMessageHelper mimeMessageHelper = new MimeMessageHelper(mimeMessage, true);
 			mimeMessageHelper.setTo(toAddress);
-			mimeMessageHelper.setSubject("Itinerary for your flight.");
-			mimeMessageHelper.setText("Please find your Itinerary attached.");
+			mimeMessageHelper.setSubject(EMAIL_SUBJECT);
+			mimeMessageHelper.setText(EMAIL_BODY);
 			mimeMessageHelper.addAttachment("Itinerary", new File(filePath));
 			mailSender.send(mimeMessage);
 			LOGGER.info("Mail sent successfully to email - "+toAddress);

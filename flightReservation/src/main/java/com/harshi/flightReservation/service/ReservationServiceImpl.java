@@ -3,6 +3,7 @@ package com.harshi.flightReservation.service;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Service;
 
 import com.harshi.flightReservation.controllers.UserController;
@@ -17,6 +18,9 @@ import com.harshi.flightReservation.util.PdfGenerator;
 
 @Service
 public class ReservationServiceImpl implements ReservationService {
+
+	@Value("${com.harshi.flightReservation.itinerary.dirpath}")
+	private String ITINERARY_DIR;
 
 	@Autowired
 	PassengerRepository passengerRepository;
@@ -43,7 +47,7 @@ public class ReservationServiceImpl implements ReservationService {
 		reservation.setCheckedIn(false);
 		Reservation savedReservation= reservationRepository.save(reservation);
 		LOGGER.info("Reservation saved - "+ reservation);
-		String filepath = "C:\\Users\\Admin\\Documents\\Itinerary"+savedReservation.getId()+".pdf";
+		String filepath = ITINERARY_DIR+savedReservation.getId()+".pdf";
 		pdfGenerator.generateItinerary(savedReservation, filepath);
 		emailUtil.sendItinerary(passenger.getEmail(), filepath );
 		LOGGER.info("Itinerary generated for Reservation with id - "+ savedReservation.getId());
