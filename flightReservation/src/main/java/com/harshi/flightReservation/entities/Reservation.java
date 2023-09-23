@@ -11,9 +11,12 @@ public class Reservation extends AbstractEntity {
 	private int numOfBags;
 	@Override
 	public String toString() {
-		return "Reservation [checkedIn=" + checkedIn + ", numOfBags=" + numOfBags + ", passenger=" + passenger
-				+ ", flight=" + flight + "]";
-	}
+		 return "Reservation Details:\n" +
+		           "Checked In: " + checkedIn + "\n" +
+		           "Number of Bags: " + numOfBags + "\n" +
+		           "Passenger: " + passenger + "\n" +
+		           "Flight: " + flight;
+		}
 	@OneToOne
 	private Passenger passenger;
 	@OneToOne

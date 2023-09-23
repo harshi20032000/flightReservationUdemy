@@ -2,22 +2,65 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
-	<meta charset="ISO-8859-1">
-	<title>Reservation Confirmed</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservation Confirmed</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        h1 {
+            color: #007BFF;
+        }
+
+        .confirmation-container {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            padding: 20px;
+            max-width: 400px;
+            margin: 0 auto;
+            text-align: left;
+        }
+
+        pre {
+            white-space: pre-wrap;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: bold;
+        }
+
+        td {
+            font-weight: bold;
+        }
+
+        b {
+            color: #007BFF;
+        }
+    </style>
 </head>
 
 <body>
-	<b th:text="${msg}"></b>
-	<h2>Reservation Summary</h2>
-	<h1>Flight Details</h1>
-	<pre>
-	Reservation Id : <td th:text="${reservation.id}"></td>
-	
-	<br>
-	Passenger : <td th:text="${reservation.passenger}"></td>
-	<br>
-	Flight : <td th:text="${reservation.flight}"></td>
-	</pre>
+    <b th:text="${msg}"></b>
+    <h2>Reservation Summary</h2>
+    <div class="confirmation-container">
+        <h1>Flight Details</h1>
+        <pre>
+            Reservation Id: <td th:text="${reservation.id}"></td>
+            Passenger: <td th:text="${reservation.passenger}"></td>
+            Flight: <td th:text="${reservation.flight}"></td>
+        </pre>
+    </div>
 </body>
 
 </html>

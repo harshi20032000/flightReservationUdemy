@@ -2,28 +2,77 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
-	<meta charset="ISO-8859-1">
-	<title>Flights</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flights</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        table {
+            width: 80%;
+            margin: 20px auto;
+            border-collapse: collapse;
+            background-color: #fff;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+        }
+
+        th, td {
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+            text-align: left;
+        }
+
+        th {
+            background-color: #007BFF;
+            color: #fff;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+
+        a {
+            text-decoration: none;
+            background-color: #007BFF;
+            color: #fff;
+            padding: 5px 10px;
+            border-radius: 4px;
+            transition: background-color 0.3s;
+        }
+
+        a:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 
 <body>
-	<h2>Flights: </h2>
-<table>
-		<tr>
-			<th>Airlines</th>
-			<th>Departure City</th>
-			<th>Arrival City</th>
-			<th>Estimated Departure Time</th>
-		</tr>
-		<tr th:each="flight:${flights}">
-			<td th:text="${flight.operatingAirlines}"></td>
-			<td th:text="${flight.departureCity}"></td>
-			<td th:text="${flight.arrivalCity}"></td>
-			<td th:text="${flight.estimatedDepartureTime}"></td>
-			<td> <a th:href="@{'showCompleteReservation?flightId='+${flight.id}}">Book Reservation</a> </td>
-			
-		</tr>
-		<table/>
+    <h2>Flights</h2>
+    <table>
+        <tr>
+            <th>Airlines</th>
+            <th>Departure City</th>
+            <th>Arrival City</th>
+            <th>Estimated Departure Time</th>
+            <th>Actions</th>
+        </tr>
+        <tr th:each="flight : ${flights}">
+            <td th:text="${flight.operatingAirlines}"></td>
+            <td th:text="${flight.departureCity}"></td>
+            <td th:text="${flight.arrivalCity}"></td>
+            <td th:text="${flight.estimatedDepartureTime}"></td>
+            <td><a th:href="@{'showCompleteReservation?flightId=' + ${flight.id}}">Book Reservation</a></td>
+        </tr>
+    </table>
 </body>
 
 </html>

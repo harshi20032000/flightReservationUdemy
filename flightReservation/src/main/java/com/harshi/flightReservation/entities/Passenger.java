@@ -36,8 +36,12 @@ public class Passenger extends AbstractEntity {
 	}
 	@Override
 	public String toString() {
-		return "Passenger [firstName=" + firstName + ", middleName=" + middleName + ", lastName=" + lastName
-				+ ", email=" + email + ", phone=" + phone + "]";
+	    return "Passenger Information:\n" +
+	           "First Name: " + firstName + "\n" +
+	           "Middle Name: " + middleName + "\n" +
+	           "Last Name: " + lastName + "\n" +
+	           "Email: " + email + "\n" +
+	           "Phone: " + phone;
 	}
 	public void setPhone(String phone) {
 		this.phone = phone;

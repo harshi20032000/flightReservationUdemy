@@ -2,15 +2,40 @@
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
 
 <head>
-	<meta charset="ISO-8859-1">
-	<title>flight reservation application</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flight Reservation Application</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        a {
+            text-decoration: none;
+            background-color: #007BFF;
+            color: #fff;
+            padding: 8px 16px;
+            border-radius: 4px;
+            margin: 10px;
+            transition: background-color 0.3s;
+        }
+
+        a:hover {
+            background-color: #0056b3;
+        }
+    </style>
 </head>
 
 <body>
-	<h2>welcome to flight reservation portal</h2>
-	New User- Click here - <a href="showReg"> Register</a>
-	<br>
-	Existing User- Click here - <a href="showLogin"> Login</a>
+    <h2>Welcome to the Flight Reservation Portal</h2>
+    <p>New User - Click here to <a href="showReg">Register</a></p>
+    <p>Existing User - Click here to <a href="showLogin">Login</a></p>
 </body>
 
 </html>
