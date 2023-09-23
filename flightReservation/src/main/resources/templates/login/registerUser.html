@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,73 +7,77 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
         }
 
         h2 {
             color: #333;
         }
 
-        form {
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-            padding: 20px;
-            max-width: 400px;
+        .container {
+            max-width: 800px;
             margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        form {
+            margin-top: 20px;
         }
 
         label {
             display: block;
-            margin-bottom: 6px;
-            font-weight: bold;
+            margin-bottom: 5px;
+            color: #333;
         }
 
         input[type="text"],
         input[type="password"] {
             width: 100%;
             padding: 10px;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
             border: 1px solid #ccc;
-            border-radius: 4px;
+            border-radius: 5px;
         }
 
         input[type="submit"] {
-            background-color: #007BFF;
+            background-color: #333;
             color: #fff;
             padding: 10px 20px;
             border: none;
-            border-radius: 4px;
+            border-radius: 5px;
             cursor: pointer;
         }
 
         input[type="submit"]:hover {
-            background-color: #0056b3;
+            background-color: #555;
         }
     </style>
 </head>
-
 <body>
-    <h2>User Registration</h2>
-    <form action="registerUser" method="post">
-        <label for="firstName">First Name:</label>
-        <input type="text" name="firstName" id="firstName">
+    <div class="container">
+        <h2>User Registration</h2>
+        <form action="registerUser" method="post">
+            <label for="firstName">First Name:</label>
+            <input type="text" name="firstName" id="firstName">
 
-        <label for="lastName">Last Name:</label>
-        <input type="text" name="lastName" id="lastName">
+            <label for="lastName">Last Name:</label>
+            <input type="text" name="lastName" id="lastName">
 
-        <label for="email">Username:</label>
-        <input type="text" name="email" id="email">
+            <label for="email">Username:</label>
+            <input type="text" name="email" id="email">
 
-        <label for="password">Password:</label>
-        <input type="password" name="password" id="password">
+            <label for="password">Password:</label>
+            <input type="password" name="password" id="password">
 
-        <label for="confirmPassword">Confirm Password:</label>
-        <input type="password" name="confirmPassword" id="confirmPassword">
+            <label for="confirmPassword">Confirm Password:</label>
+            <input type="password" name="confirmPassword" id="confirmPassword">
 
-        <input type="submit" value="Register">
-    </form>
+            <input type="submit" value="Register">
+        </form>
+    </div>
 </body>
-
 </html>

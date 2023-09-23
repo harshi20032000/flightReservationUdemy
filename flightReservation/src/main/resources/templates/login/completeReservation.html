@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,31 +7,33 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
         }
 
         h2 {
             color: #333;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
         }
 
         .flight-details {
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
             padding: 20px;
-            max-width: 400px;
-            margin: 0 auto;
             text-align: left;
         }
 
         form {
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-            padding: 20px;
-            max-width: 400px;
-            margin: 20px auto;
+            margin-top: 20px;
         }
 
         pre {
@@ -48,47 +49,51 @@
         input[type="text"] {
             width: 100%;
             padding: 10px;
-            margin-bottom: 15px;
+            margin-bottom: 10px;
             border: 1px solid #ccc;
-            border-radius: 4px;
+            border-radius: 5px;
+        }
+
+        input[type="text"]::placeholder {
+            color: #999;
         }
 
         input[type="submit"] {
-            background-color: #007BFF;
+            background-color: #333;
             color: #fff;
             padding: 10px 20px;
             border: none;
-            border-radius: 4px;
+            border-radius: 5px;
             cursor: pointer;
         }
 
         input[type="submit"]:hover {
-            background-color: #0056b3;
+            background-color: #555;
         }
     </style>
 </head>
-
 <body>
-    <h2>Complete Reservation</h2>
-    <div class="flight-details">
-        <h3>Flight Details:</h3>
-        <p>Airlines: <span th:text="${flight.operatingAirlines}"></span></p>
-        <p>From: <span th:text="${flight.departureCity}"></span></p>
-        <p>To: <span th:text="${flight.arrivalCity}"></span></p>
-        <p>Time of Departure: <span th:text="${flight.estimatedDepartureTime}"></span></p>
+    <div class="container">
+        <h2>Complete Reservation</h2>
+        <div class="flight-details">
+            <h3>Flight Details:</h3>
+            <p>Airlines: <span th:text="${flight.operatingAirlines}"></span></p>
+            <p>From: <span th:text="${flight.departureCity}"></span></p>
+            <p>To: <span th:text="${flight.arrivalCity}"></span></p>
+            <p>Time of Departure: <span th:text="${flight.estimatedDepartureTime}"></span></p>
+        </div>
+
+        <form action="completeReservation" method="post">
+            <h2>Enter Passenger Details:</h2>
+            <pre>
+                FlightId: <input type="text" name="flightId" th:value="${flight.id}" readonly>
+                First Name: <input type="text" name="firstName">
+                Last Name: <input type="text" name="lastName">
+                Email: <input type="text" name="email">
+                Phone: <input type="text" name="phone">
+                <input type="submit" value="Confirm">
+            </pre>
+        </form>
     </div>
-
-    <form action="completeReservation" method="post">
-        <h2>Enter Passenger Details:</h2>
-        <pre>
-            FlightId: <input type="text" name="flightId" th:value="${flight.id}" readonly>
-            First Name: <input type="text" name="firstName">
-            Last Name: <input type="text" name="lastName">
-            Email: <input type="text" name="email">
-            Phone: <input type="text" name="phone">
-            <input type="submit" value="Confirm">
-        </pre>
-    </form>
 </body>
-
 </html>

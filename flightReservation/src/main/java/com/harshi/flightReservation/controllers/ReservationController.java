@@ -1,5 +1,7 @@
 package com.harshi.flightReservation.controllers;
 
+import java.util.List;
+
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,6 +26,13 @@ public class ReservationController {
 	ReservationService reservationService;
 	
 	private static final Logger LOGGER = LoggerFactory.getLogger(UserController.class);
+	
+	@RequestMapping("/showAllReservations")
+	public String showAllReservations(ModelMap modelMap) {
+		List<Reservation> reservations = reservationService.getReservations();
+		modelMap.addAttribute("reservations", reservations);
+		return "login/showAllReservations";
+	}
 	
 	@RequestMapping(value="/showCompleteReservation")
 	public String showCompleteReservation(@RequestParam("flightId") Long flightId, ModelMap modelMap) {

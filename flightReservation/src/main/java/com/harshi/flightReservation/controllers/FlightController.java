@@ -23,6 +23,17 @@ public class FlightController {
 	
 	private static final Logger LOGGER = LoggerFactory.getLogger(UserController.class);
 	
+	@RequestMapping("/showLanding")
+	public String showLanding() {
+		LOGGER.info("Inside showLanding() on FlightController");
+		return "login/landing";
+	}
+	@RequestMapping("/showfindFlights")
+	public String showfindFlights() {
+		LOGGER.info("Inside showLanding() on FlightController");
+		return "login/findFlights";
+	}
+	
 	@RequestMapping(value = "/findFlights", method=RequestMethod.POST)
 	public String findFlights(@RequestParam("from") String from, @RequestParam("to")String to, @RequestParam("dateOfDeparture") @DateTimeFormat(pattern="yyyy-MM-dd") Date dateOfDeparture, ModelMap modelMap) {
 		LOGGER.info("Inside findFlights() on FlightController");

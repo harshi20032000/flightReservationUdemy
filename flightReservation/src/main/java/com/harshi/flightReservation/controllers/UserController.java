@@ -48,7 +48,7 @@ public class UserController {
 		User user = userRepository.findByEmail(email);
 		if (user.getPassword().equals(password)) {
 			LOGGER.info("Redirecting to findFlights.html on UserController");
-			return "login/findFlights";
+			return "login/landing";
 		} else
 			modelMap.addAttribute("msg", "Invalid username/password. Try Again");
 		LOGGER.info("Redirecting to login.html on UserController");

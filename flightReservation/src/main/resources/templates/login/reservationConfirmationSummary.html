@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en" xmlns:th="http://www.thymeleaf.org">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,26 +7,33 @@
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
         }
 
         h2 {
             color: #333;
+            text-align: center;
+            margin-top: 20px;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #fff;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            border-radius: 8px;
+        }
+
+        .confirmation-container {
+            padding: 20px;
+            text-align: left;
         }
 
         h1 {
             color: #007BFF;
-        }
-
-        .confirmation-container {
-            background-color: #fff;
-            border-radius: 8px;
-            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
-            padding: 20px;
-            max-width: 400px;
-            margin: 0 auto;
-            text-align: left;
         }
 
         pre {
@@ -47,20 +53,36 @@
         b {
             color: #007BFF;
         }
+
+        a {
+            display: block;
+            text-align: center;
+            margin-top: 20px;
+            text-decoration: none;
+            background-color: #333;
+            color: #fff;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        a:hover {
+            background-color: #555;
+        }
     </style>
 </head>
-
 <body>
-    <b th:text="${msg}"></b>
-    <h2>Reservation Summary</h2>
-    <div class="confirmation-container">
-        <h1>Flight Details</h1>
-        <pre>
-            Reservation Id: <td th:text="${reservation.id}"></td>
-            Passenger: <td th:text="${reservation.passenger}"></td>
-            Flight: <td th:text="${reservation.flight}"></td>
-        </pre>
+    <div class="container">
+        <b th:text="${msg}"></b>
+        <h2>Reservation Summary</h2>
+        <div class="confirmation-container">
+            <h1>Flight Details</h1>
+            <pre>
+                Reservation Id: <td th:text="${reservation.id}"></td>
+                Passenger: <td th:text="${reservation.passenger}"></td>
+                Flight: <td th:text="${reservation.flight}"></td>
+            </pre>
+        </div>
+        <a href="showLanding">Go to Home</a>
     </div>
 </body>
-
 </html>

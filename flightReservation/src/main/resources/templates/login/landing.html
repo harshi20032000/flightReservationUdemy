@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flight Reservation Application</title>
+    <title>Flight Reservation Landing</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -20,27 +20,8 @@
             max-width: 800px;
             margin: 0 auto;
             padding: 20px;
-        }
-
-        table {
-            border-collapse: collapse;
-            width: 100%;
             background-color: #fff;
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-        }
-
-        th, td {
-            padding: 12px 15px;
-            text-align: left;
-        }
-
-        th {
-            background-color: #333;
-            color: #fff;
-        }
-
-        tr:nth-child(even) {
-            background-color: #f2f2f2;
         }
 
         a {
@@ -57,30 +38,13 @@
         a:hover {
             background-color: #555;
         }
-
-        /* Responsive Styles */
-        @media screen and (max-width: 768px) {
-            .container {
-                padding: 10px;
-            }
-
-            table {
-                width: 100%;
-                box-shadow: none;
-            }
-
-            th, td {
-                padding: 8px;
-                text-align: left;
-            }
-        }
     </style>
 </head>
 <body>
     <div class="container">
-        <h2>Welcome to the Flight Reservation Portal</h2>
-        <p>New User - Click here to <a href="showReg">Register</a></p>
-        <p>Existing User - Click here to <a href="showLogin">Login</a></p>
+        <h2>Welcome to Flight Reservation</h2>
+        <a href="showfindFlights">Search Flights</a>
+        <a href="showAllReservations">See Reservations</a>
     </div>
 </body>
 </html>
