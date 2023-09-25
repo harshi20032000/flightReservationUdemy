@@ -3,6 +3,7 @@ package com.harshi.flightReservation.controllers;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -12,12 +13,22 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import com.harshi.flightReservation.entities.User;
 import com.harshi.flightReservation.repos.UserRepository;
+import com.harshi.flightReservation.service.SecurityService;
+
+import jakarta.servlet.http.HttpServletRequest;
+import jakarta.servlet.http.HttpServletResponse;
 
 @Controller
 public class UserController {
 
 	@Autowired
-	UserRepository userRepository;
+	private UserRepository userRepository;
+	
+	@Autowired
+	private BCryptPasswordEncoder bCryptPasswordEncoder;
+	
+	@Autowired
+	private SecurityService securityService;
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(UserController.class);
 
@@ -30,6 +41,7 @@ public class UserController {
 	@RequestMapping(value = "/registerUser", method = RequestMethod.POST)
 	public String register(@ModelAttribute("user") User user) {
 		LOGGER.info("Inside register() for user " + user+ "on UserController");
+		user.setPassword(bCryptPasswordEncoder.encode(user.getPassword()));
 		userRepository.save(user);
 		LOGGER.info("Redirecting to login.html on UserController");
 		return "login/login";
@@ -43,10 +55,10 @@ public class UserController {
 
 	@RequestMapping(value = "/login", method = RequestMethod.POST)
 	public String login(@RequestParam("email") String email, @RequestParam("password") String password,
-			ModelMap modelMap) {
+			ModelMap modelMap, HttpServletRequest req, HttpServletResponse res) {
 		LOGGER.info("Inside showLoginPage() with email - " + email+"on UserController");
-		User user = userRepository.findByEmail(email);
-		if (user.getPassword().equals(password)) {
+		boolean isLoginSuccess = securityService.login(email, password, req, res);
+		if (isLoginSuccess) {
 			LOGGER.info("Redirecting to findFlights.html on UserController");
 			return "login/landing";
 		} else

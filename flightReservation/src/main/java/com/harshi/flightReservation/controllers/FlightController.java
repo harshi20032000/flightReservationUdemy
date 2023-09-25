@@ -42,7 +42,9 @@ public class FlightController {
 		LOGGER.info("Redirecting to displayFlights.html on flightController");
 		return "login/displayFlights";
 		}
-	
-	
+	@RequestMapping("admin/showFlight")
+	public String showAddFlight() {
+		return "addFlight";
+	}
 	
 }

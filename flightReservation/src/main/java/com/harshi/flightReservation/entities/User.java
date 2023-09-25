@@ -1,16 +1,26 @@
 package com.harshi.flightReservation.entities;
 
+import java.util.Set;
+
+import org.springframework.security.core.GrantedAuthority;
+
 import jakarta.persistence.Entity;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.JoinTable;
+import jakarta.persistence.ManyToMany;
 import lombok.Data;
 
 @Entity
 @Data
-public class User extends AbstractEntity {
+public class User extends AbstractEntity{
 
 	private String firstName;
 	private String lastName;
 	private String email;
 	private String password;
+	@ManyToMany
+	@JoinTable(name="user_roles", joinColumns=@JoinColumn(name="user_id"), inverseJoinColumns = @JoinColumn(name="role_id"))
+	private Set<Role> roles;
 
 	public String getFirstName() {
 		return firstName;
@@ -44,6 +54,14 @@ public class User extends AbstractEntity {
 		this.password = password;
 	}
 
+	public Set<Role> getRoles() {
+		return roles;
+	}
+
+	public void setRoles(Set<Role> roles) {
+		this.roles = roles;
+	}
+
 	@Override
 	public String toString() {
 		return "User Details:\n" +
@@ -51,5 +69,6 @@ public class User extends AbstractEntity {
 		           "Last Name: " + lastName + "\n" +
 		           "Email: " + email;
 		}
+
 
 }

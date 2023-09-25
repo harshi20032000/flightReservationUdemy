@@ -1,0 +1,462 @@
+2023-09-26 04:40:58|[main]|INFO |com.harshi.flightReservation.FlightReservationApplication-Starting FlightReservationApplication using Java 17.0.7 with PID 8792 (C:\Users\Admin\Downloads\codebase\flight\flightReservation\target\classes started by Admin in C:\Users\Admin\Downloads\codebase\flight\flightReservation)
+2023-09-26 04:40:58|[main]|INFO |com.harshi.flightReservation.FlightReservationApplication-No active profile set, falling back to 1 default profile: "default"
+2023-09-26 04:40:59|[main]|INFO |org.springframework.data.repository.config.RepositoryConfigurationDelegate-Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-26 04:40:59|[main]|INFO |org.springframework.data.repository.config.RepositoryConfigurationDelegate-Finished Spring Data repository scanning in 125 ms. Found 5 JPA repository interfaces.
+2023-09-26 04:41:00|[main]|INFO |org.springframework.boot.web.embedded.tomcat.TomcatWebServer-Tomcat initialized with port(s): 8085 (http)
+2023-09-26 04:41:00|[main]|INFO |org.apache.coyote.http11.Http11NioProtocol-Initializing ProtocolHandler ["http-nio-8085"]
+2023-09-26 04:41:00|[main]|INFO |org.apache.catalina.core.StandardService-Starting service [Tomcat]
+2023-09-26 04:41:00|[main]|INFO |org.apache.catalina.core.StandardEngine-Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-26 04:41:01|[main]|INFO |org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/flightreservation]-Initializing Spring embedded WebApplicationContext
+2023-09-26 04:41:01|[main]|INFO |org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext-Root WebApplicationContext: initialization completed in 2694 ms
+2023-09-26 04:41:01|[main]|INFO |org.hibernate.jpa.internal.util.LogHelper-HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-26 04:41:01|[main]|INFO |org.hibernate.Version-HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-26 04:41:01|[main]|INFO |org.hibernate.cfg.Environment-HHH000406: Using bytecode reflection optimizer
+2023-09-26 04:41:01|[main]|INFO |org.hibernate.bytecode.internal.BytecodeProviderInitiator-HHH000021: Bytecode provider name : bytebuddy
+2023-09-26 04:41:02|[main]|INFO |org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo-No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-26 04:41:02|[main]|INFO |com.zaxxer.hikari.HikariDataSource-HikariPool-1 - Starting...
+2023-09-26 04:41:02|[main]|INFO |com.zaxxer.hikari.pool.HikariPool-HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@5950054d
+2023-09-26 04:41:02|[main]|INFO |com.zaxxer.hikari.HikariDataSource-HikariPool-1 - Start completed.
+2023-09-26 04:41:03|[main]|INFO |org.hibernate.bytecode.internal.BytecodeProviderInitiator-HHH000021: Bytecode provider name : bytebuddy
+2023-09-26 04:41:04|[main]|INFO |org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator-HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-26 04:41:05|[main]|INFO |org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean-Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-26 04:41:05|[main]|INFO |org.springframework.data.jpa.repository.query.QueryEnhancerFactory-Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-09-26 04:41:06|[main]|WARN |org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext-Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController': Unsatisfied dependency expressed through field 'bCryptPasswordEncoder': Error creating bean with name 'webSecurityConfig': Unsatisfied dependency expressed through field 'userDetailsService': No qualifying bean of type 'org.springframework.security.core.userdetails.UserDetailsService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2023-09-26 04:41:06|[main]|INFO |org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean-Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-26 04:41:06|[main]|INFO |com.zaxxer.hikari.HikariDataSource-HikariPool-1 - Shutdown initiated...
+2023-09-26 04:41:06|[main]|INFO |com.zaxxer.hikari.HikariDataSource-HikariPool-1 - Shutdown completed.
+2023-09-26 04:41:06|[main]|INFO |org.apache.catalina.core.StandardService-Stopping service [Tomcat]
+2023-09-26 04:41:06|[main]|INFO |org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger-
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-09-26 04:41:06|[main]|ERROR|org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter-
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field userDetailsService in com.harshi.flightReservation.security.config.WebSecurityConfig required a bean of type 'org.springframework.security.core.userdetails.UserDetailsService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'org.springframework.security.core.userdetails.UserDetailsService' in your configuration.
+
+2023-09-26 04:43:51|[main]|INFO |com.harshi.flightReservation.FlightReservationApplication-Starting FlightReservationApplication using Java 17.0.7 with PID 11388 (C:\Users\Admin\Downloads\codebase\flight\flightReservation\target\classes started by Admin in C:\Users\Admin\Downloads\codebase\flight\flightReservation)
+2023-09-26 04:43:51|[main]|INFO |com.harshi.flightReservation.FlightReservationApplication-No active profile set, falling back to 1 default profile: "default"
+2023-09-26 04:43:52|[main]|INFO |org.springframework.data.repository.config.RepositoryConfigurationDelegate-Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-26 04:43:53|[main]|INFO |org.springframework.data.repository.config.RepositoryConfigurationDelegate-Finished Spring Data repository scanning in 131 ms. Found 5 JPA repository interfaces.
+2023-09-26 04:43:54|[main]|INFO |org.springframework.boot.web.embedded.tomcat.TomcatWebServer-Tomcat initialized with port(s): 8085 (http)
+2023-09-26 04:43:54|[main]|INFO |org.apache.coyote.http11.Http11NioProtocol-Initializing ProtocolHandler ["http-nio-8085"]
+2023-09-26 04:43:54|[main]|INFO |org.apache.catalina.core.StandardService-Starting service [Tomcat]
+2023-09-26 04:43:54|[main]|INFO |org.apache.catalina.core.StandardEngine-Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-26 04:43:54|[main]|INFO |org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/flightreservation]-Initializing Spring embedded WebApplicationContext
+2023-09-26 04:43:54|[main]|INFO |org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext-Root WebApplicationContext: initialization completed in 2750 ms
+2023-09-26 04:43:54|[main]|INFO |org.hibernate.jpa.internal.util.LogHelper-HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-26 04:43:55|[main]|INFO |org.hibernate.Version-HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-26 04:43:55|[main]|INFO |org.hibernate.cfg.Environment-HHH000406: Using bytecode reflection optimizer
+2023-09-26 04:43:55|[main]|INFO |org.hibernate.bytecode.internal.BytecodeProviderInitiator-HHH000021: Bytecode provider name : bytebuddy
+2023-09-26 04:43:55|[main]|INFO |org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo-No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-26 04:43:55|[main]|INFO |com.zaxxer.hikari.HikariDataSource-HikariPool-1 - Starting...
+2023-09-26 04:43:56|[main]|INFO |com.zaxxer.hikari.pool.HikariPool-HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@e4b54d3
+2023-09-26 04:43:56|[main]|INFO |com.zaxxer.hikari.HikariDataSource-HikariPool-1 - Start completed.
+2023-09-26 04:43:57|[main]|INFO |org.hibernate.bytecode.internal.BytecodeProviderInitiator-HHH000021: Bytecode provider name : bytebuddy
+2023-09-26 04:43:58|[main]|INFO |org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator-HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-26 04:43:58|[main]|INFO |org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean-Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-26 04:43:59|[main]|INFO |org.springframework.data.jpa.repository.query.QueryEnhancerFactory-Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-09-26 04:44:00|[main]|WARN |org.springframework.boot.web.servlet.context.AnnotationConfigServletWebServerApplicationContext-Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.UnsatisfiedDependencyException: Error creating bean with name 'userController': Unsatisfied dependency expressed through field 'securityService': No qualifying bean of type 'com.harshi.flightReservation.service.SecurityService' available: expected at least 1 bean which qualifies as autowire candidate. Dependency annotations: {@org.springframework.beans.factory.annotation.Autowired(required=true)}
+2023-09-26 04:44:00|[main]|INFO |org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean-Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-26 04:44:00|[main]|INFO |com.zaxxer.hikari.HikariDataSource-HikariPool-1 - Shutdown initiated...
+2023-09-26 04:44:00|[main]|INFO |com.zaxxer.hikari.HikariDataSource-HikariPool-1 - Shutdown completed.
+2023-09-26 04:44:00|[main]|INFO |org.apache.catalina.core.StandardService-Stopping service [Tomcat]
+2023-09-26 04:44:00|[main]|INFO |org.springframework.boot.autoconfigure.logging.ConditionEvaluationReportLogger-
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2023-09-26 04:44:00|[main]|ERROR|org.springframework.boot.diagnostics.LoggingFailureAnalysisReporter-
+
+***************************
+APPLICATION FAILED TO START
+***************************
+
+Description:
+
+Field securityService in com.harshi.flightReservation.controllers.UserController required a bean of type 'com.harshi.flightReservation.service.SecurityService' that could not be found.
+
+The injection point has the following annotations:
+	- @org.springframework.beans.factory.annotation.Autowired(required=true)
+
+
+Action:
+
+Consider defining a bean of type 'com.harshi.flightReservation.service.SecurityService' in your configuration.
+
+2023-09-26 04:44:31|[main]|INFO |com.harshi.flightReservation.FlightReservationApplication-Starting FlightReservationApplication using Java 17.0.7 with PID 6428 (C:\Users\Admin\Downloads\codebase\flight\flightReservation\target\classes started by Admin in C:\Users\Admin\Downloads\codebase\flight\flightReservation)
+2023-09-26 04:44:31|[main]|INFO |com.harshi.flightReservation.FlightReservationApplication-No active profile set, falling back to 1 default profile: "default"
+2023-09-26 04:44:32|[main]|INFO |org.springframework.data.repository.config.RepositoryConfigurationDelegate-Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-26 04:44:33|[main]|INFO |org.springframework.data.repository.config.RepositoryConfigurationDelegate-Finished Spring Data repository scanning in 111 ms. Found 5 JPA repository interfaces.
+2023-09-26 04:44:34|[main]|INFO |org.springframework.boot.web.embedded.tomcat.TomcatWebServer-Tomcat initialized with port(s): 8085 (http)
+2023-09-26 04:44:34|[main]|INFO |org.apache.coyote.http11.Http11NioProtocol-Initializing ProtocolHandler ["http-nio-8085"]
+2023-09-26 04:44:34|[main]|INFO |org.apache.catalina.core.StandardService-Starting service [Tomcat]
+2023-09-26 04:44:34|[main]|INFO |org.apache.catalina.core.StandardEngine-Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-26 04:44:34|[main]|INFO |org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/flightreservation]-Initializing Spring embedded WebApplicationContext
+2023-09-26 04:44:34|[main]|INFO |org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext-Root WebApplicationContext: initialization completed in 2680 ms
+2023-09-26 04:44:34|[main]|INFO |org.hibernate.jpa.internal.util.LogHelper-HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-26 04:44:34|[main]|INFO |org.hibernate.Version-HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-26 04:44:34|[main]|INFO |org.hibernate.cfg.Environment-HHH000406: Using bytecode reflection optimizer
+2023-09-26 04:44:35|[main]|INFO |org.hibernate.bytecode.internal.BytecodeProviderInitiator-HHH000021: Bytecode provider name : bytebuddy
+2023-09-26 04:44:35|[main]|INFO |org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo-No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-26 04:44:35|[main]|INFO |com.zaxxer.hikari.HikariDataSource-HikariPool-1 - Starting...
+2023-09-26 04:44:35|[main]|INFO |com.zaxxer.hikari.pool.HikariPool-HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@10d905c1
+2023-09-26 04:44:35|[main]|INFO |com.zaxxer.hikari.HikariDataSource-HikariPool-1 - Start completed.
+2023-09-26 04:44:36|[main]|INFO |org.hibernate.bytecode.internal.BytecodeProviderInitiator-HHH000021: Bytecode provider name : bytebuddy
+2023-09-26 04:44:37|[main]|INFO |org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator-HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-26 04:44:38|[main]|INFO |org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean-Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-26 04:44:38|[main]|INFO |org.springframework.data.jpa.repository.query.QueryEnhancerFactory-Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-09-26 04:44:39|[main]|WARN |org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration-spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-26 04:44:39|[main]|INFO |org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping-Adding welcome page template: index
+2023-09-26 04:44:40|[main]|INFO |org.springframework.security.web.DefaultSecurityFilterChain-Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@6314e967, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@48611ad4, org.springframework.security.web.context.SecurityContextHolderFilter@4c617143, org.springframework.security.web.header.HeaderWriterFilter@13553828, org.springframework.security.web.authentication.logout.LogoutFilter@2daf650b, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@62a89e92, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@1fcef7, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@4434eb51, org.springframework.security.web.access.ExceptionTranslationFilter@2512eaaa, org.springframework.security.web.access.intercept.AuthorizationFilter@6d5b160]
+2023-09-26 04:44:40|[main]|INFO |org.apache.coyote.http11.Http11NioProtocol-Starting ProtocolHandler ["http-nio-8085"]
+2023-09-26 04:44:40|[main]|INFO |org.springframework.boot.web.embedded.tomcat.TomcatWebServer-Tomcat started on port(s): 8085 (http) with context path '/flightreservation'
+2023-09-26 04:44:40|[main]|INFO |com.harshi.flightReservation.FlightReservationApplication-Started FlightReservationApplication in 9.613 seconds (process running for 11.151)
+2023-09-26 04:45:23|[http-nio-8085-exec-1]|INFO |org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/flightreservation]-Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-26 04:45:23|[http-nio-8085-exec-1]|INFO |org.springframework.web.servlet.DispatcherServlet-Initializing Servlet 'dispatcherServlet'
+2023-09-26 04:45:23|[http-nio-8085-exec-1]|INFO |org.springframework.web.servlet.DispatcherServlet-Completed initialization in 2 ms
+2023-09-26 04:46:01|[http-nio-8085-exec-6]|INFO |com.harshi.flightReservation.controllers.UserController-Inside showRegistrationPage() on UserController
+2023-09-26 04:47:21|[http-nio-8085-exec-8]|INFO |com.harshi.flightReservation.controllers.UserController-Inside register() for user User Details:
+First Name: Harshikesh
+Last Name: Dubey
+Email: learningpandit@gmail.comon UserController
+2023-09-26 04:47:21|[http-nio-8085-exec-8]|INFO |com.harshi.flightReservation.controllers.UserController-Redirecting to login.html on UserController
+2023-09-26 04:49:22|[http-nio-8085-exec-10]|INFO |com.harshi.flightReservation.controllers.UserController-Inside showLoginPage() with email - learningpandit@gmail.comon UserController
+2023-09-26 04:49:23|[http-nio-8085-exec-10]|INFO |com.harshi.flightReservation.controllers.UserController-Redirecting to findFlights.html on UserController
+2023-09-26 04:49:28|[http-nio-8085-exec-2]|INFO |com.harshi.flightReservation.controllers.UserController-Inside showLanding() on FlightController
+2023-09-26 04:49:59|[http-nio-8085-exec-4]|INFO |com.harshi.flightReservation.controllers.UserController-Inside findFlights() on FlightController
+2023-09-26 04:50:00|[http-nio-8085-exec-4]|INFO |com.harshi.flightReservation.controllers.UserController-Redirecting to displayFlights.html on flightController
+2023-09-26 04:50:39|[http-nio-8085-exec-6]|INFO |com.harshi.flightReservation.controllers.UserController-Inside showLanding() on FlightController
+2023-09-26 04:50:49|[http-nio-8085-exec-8]|INFO |com.harshi.flightReservation.controllers.UserController-Inside findFlights() on FlightController
+2023-09-26 04:50:49|[http-nio-8085-exec-8]|INFO |com.harshi.flightReservation.controllers.UserController-Redirecting to displayFlights.html on flightController
+2023-09-26 04:50:53|[http-nio-8085-exec-9]|INFO |com.harshi.flightReservation.controllers.UserController-Inside showCompleteReservation() on ReservationController with flightId - 1
+2023-09-26 04:50:53|[http-nio-8085-exec-9]|INFO |com.harshi.flightReservation.controllers.UserController-Redirecting to completeReservation.html on ReservationController
+2023-09-26 04:51:11|[http-nio-8085-exec-1]|INFO |com.harshi.flightReservation.controllers.UserController-Inside completeReservation() on ReservationController with flightId - 1
+2023-09-26 04:51:11|[http-nio-8085-exec-1]|INFO |com.harshi.flightReservation.controllers.UserController-Inside bookFlight() on ReservationServiceImpl
+2023-09-26 04:51:11|[http-nio-8085-exec-1]|WARN |org.hibernate.engine.jdbc.spi.SqlExceptionHelper-SQL Error: 1062, SQLState: 23000
+2023-09-26 04:51:11|[http-nio-8085-exec-1]|ERROR|org.hibernate.engine.jdbc.spi.SqlExceptionHelper-Duplicate entry '1' for key 'reservation.UK_qom9exn4saf28es714rbm4yni'
+2023-09-26 04:51:11|[http-nio-8085-exec-1]|ERROR|org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/flightreservation].[dispatcherServlet]-Servlet.service() for servlet [dispatcherServlet] in context with path [/flightreservation] threw exception [Request processing failed: org.springframework.dao.DataIntegrityViolationException: could not execute statement [Duplicate entry '1' for key 'reservation.UK_qom9exn4saf28es714rbm4yni'] [insert into reservation (checked_in,flight_id,num_of_bags,passenger_id) values (?,?,?,?)]; SQL [insert into reservation (checked_in,flight_id,num_of_bags,passenger_id) values (?,?,?,?)]; constraint [reservation.UK_qom9exn4saf28es714rbm4yni]] with root cause
+java.sql.SQLIntegrityConstraintViolationException: Duplicate entry '1' for key 'reservation.UK_qom9exn4saf28es714rbm4yni'
+	at com.mysql.cj.jdbc.exceptions.SQLError.createSQLException(SQLError.java:118)
+	at com.mysql.cj.jdbc.exceptions.SQLExceptionsMapping.translateException(SQLExceptionsMapping.java:122)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeInternal(ClientPreparedStatement.java:916)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1061)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdateInternal(ClientPreparedStatement.java:1009)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeLargeUpdate(ClientPreparedStatement.java:1320)
+	at com.mysql.cj.jdbc.ClientPreparedStatement.executeUpdate(ClientPreparedStatement.java:994)
+	at com.zaxxer.hikari.pool.ProxyPreparedStatement.executeUpdate(ProxyPreparedStatement.java:61)
+	at com.zaxxer.hikari.pool.HikariProxyPreparedStatement.executeUpdate(HikariProxyPreparedStatement.java)
+	at org.hibernate.engine.jdbc.internal.ResultSetReturnImpl.executeUpdate(ResultSetReturnImpl.java:275)
+	at org.hibernate.id.insert.GetGeneratedKeysDelegate.performInsert(GetGeneratedKeysDelegate.java:107)
+	at org.hibernate.engine.jdbc.mutation.internal.MutationExecutorPostInsertSingleTable.execute(MutationExecutorPostInsertSingleTable.java:101)
+	at org.hibernate.persister.entity.mutation.InsertCoordinator.doStaticInserts(InsertCoordinator.java:169)
+	at org.hibernate.persister.entity.mutation.InsertCoordinator.coordinateInsert(InsertCoordinator.java:111)
+	at org.hibernate.persister.entity.AbstractEntityPersister.insert(AbstractEntityPersister.java:2757)
+	at org.hibernate.action.internal.EntityIdentityInsertAction.execute(EntityIdentityInsertAction.java:81)
+	at org.hibernate.engine.spi.ActionQueue.execute(ActionQueue.java:674)
+	at org.hibernate.engine.spi.ActionQueue.addResolvedEntityInsertAction(ActionQueue.java:291)
+	at org.hibernate.engine.spi.ActionQueue.addInsertAction(ActionQueue.java:272)
+	at org.hibernate.engine.spi.ActionQueue.addAction(ActionQueue.java:322)
+	at org.hibernate.event.internal.AbstractSaveEventListener.addInsertAction(AbstractSaveEventListener.java:363)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSaveOrReplicate(AbstractSaveEventListener.java:277)
+	at org.hibernate.event.internal.AbstractSaveEventListener.performSave(AbstractSaveEventListener.java:180)
+	at org.hibernate.event.internal.AbstractSaveEventListener.saveWithGeneratedId(AbstractSaveEventListener.java:140)
+	at org.hibernate.event.internal.DefaultPersistEventListener.entityIsTransient(DefaultPersistEventListener.java:175)
+	at org.hibernate.event.internal.DefaultPersistEventListener.persist(DefaultPersistEventListener.java:93)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:77)
+	at org.hibernate.event.internal.DefaultPersistEventListener.onPersist(DefaultPersistEventListener.java:54)
+	at org.hibernate.event.service.internal.EventListenerGroupImpl.fireEventOnEachListener(EventListenerGroupImpl.java:127)
+	at org.hibernate.internal.SessionImpl.firePersist(SessionImpl.java:755)
+	at org.hibernate.internal.SessionImpl.persist(SessionImpl.java:739)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.orm.jpa.ExtendedEntityManagerCreator$ExtendedEntityManagerInvocationHandler.invoke(ExtendedEntityManagerCreator.java:360)
+	at jdk.proxy2/jdk.proxy2.$Proxy112.persist(Unknown Source)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.orm.jpa.SharedEntityManagerCreator$SharedEntityManagerInvocationHandler.invoke(SharedEntityManagerCreator.java:311)
+	at jdk.proxy2/jdk.proxy2.$Proxy112.persist(Unknown Source)
+	at org.springframework.data.jpa.repository.support.SimpleJpaRepository.save(SimpleJpaRepository.java:617)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker$RepositoryFragmentMethodInvoker.lambda$new$0(RepositoryMethodInvoker.java:288)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.doInvoke(RepositoryMethodInvoker.java:136)
+	at org.springframework.data.repository.core.support.RepositoryMethodInvoker.invoke(RepositoryMethodInvoker.java:120)
+	at org.springframework.data.repository.core.support.RepositoryComposition$RepositoryFragments.invoke(RepositoryComposition.java:516)
+	at org.springframework.data.repository.core.support.RepositoryComposition.invoke(RepositoryComposition.java:285)
+	at org.springframework.data.repository.core.support.RepositoryFactorySupport$ImplementationMethodExecutionInterceptor.invoke(RepositoryFactorySupport.java:628)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.doInvoke(QueryExecutorMethodInterceptor.java:168)
+	at org.springframework.data.repository.core.support.QueryExecutorMethodInterceptor.invoke(QueryExecutorMethodInterceptor.java:143)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.projection.DefaultMethodInvokingMethodInterceptor.invoke(DefaultMethodInvokingMethodInterceptor.java:72)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123)
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:391)
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.dao.support.PersistenceExceptionTranslationInterceptor.invoke(PersistenceExceptionTranslationInterceptor.java:137)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.data.jpa.repository.support.CrudMethodMetadataPostProcessor$CrudMethodMetadataPopulatingMethodInterceptor.invoke(CrudMethodMetadataPostProcessor.java:164)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.interceptor.ExposeInvocationInterceptor.invoke(ExposeInvocationInterceptor.java:97)
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184)
+	at org.springframework.aop.framework.JdkDynamicAopProxy.invoke(JdkDynamicAopProxy.java:244)
+	at jdk.proxy2/jdk.proxy2.$Proxy124.save(Unknown Source)
+	at com.harshi.flightReservation.service.ReservationServiceImpl.bookFlight(ReservationServiceImpl.java:50)
+	at com.harshi.flightReservation.controllers.ReservationController.completeReservation(ReservationController.java:50)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:77)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:568)
+	at org.springframework.web.method.support.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:205)
+	at org.springframework.web.method.support.InvocableHandlerMethod.invokeForRequest(InvocableHandlerMethod.java:150)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:118)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:884)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:797)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1081)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:974)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1011)
+	at org.springframework.web.servlet.FrameworkServlet.doPost(FrameworkServlet.java:914)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:590)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:885)
+	at jakarta.servlet.http.HttpServlet.service(HttpServlet.java:658)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:205)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:51)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.security.web.FilterChainProxy.lambda$doFilterInternal$3(FilterChainProxy.java:231)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:365)
+	at org.springframework.security.web.access.intercept.AuthorizationFilter.doFilter(AuthorizationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:126)
+	at org.springframework.security.web.access.ExceptionTranslationFilter.doFilter(ExceptionTranslationFilter.java:120)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.AnonymousAuthenticationFilter.doFilter(AnonymousAuthenticationFilter.java:100)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter.doFilter(SecurityContextHolderAwareRequestFilter.java:179)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.savedrequest.RequestCacheAwareFilter.doFilter(RequestCacheAwareFilter.java:63)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:107)
+	at org.springframework.security.web.authentication.logout.LogoutFilter.doFilter(LogoutFilter.java:93)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.header.HeaderWriterFilter.doHeadersAfter(HeaderWriterFilter.java:90)
+	at org.springframework.security.web.header.HeaderWriterFilter.doFilterInternal(HeaderWriterFilter.java:75)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:82)
+	at org.springframework.security.web.context.SecurityContextHolderFilter.doFilter(SecurityContextHolderFilter.java:69)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter.doFilterInternal(WebAsyncManagerIntegrationFilter.java:62)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.session.DisableEncodeUrlFilter.doFilterInternal(DisableEncodeUrlFilter.java:42)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.springframework.security.web.FilterChainProxy$VirtualFilterChain.doFilter(FilterChainProxy.java:374)
+	at org.springframework.security.web.FilterChainProxy.doFilterInternal(FilterChainProxy.java:233)
+	at org.springframework.security.web.FilterChainProxy.doFilter(FilterChainProxy.java:191)
+	at org.springframework.web.filter.DelegatingFilterProxy.invokeDelegate(DelegatingFilterProxy.java:352)
+	at org.springframework.web.filter.DelegatingFilterProxy.doFilter(DelegatingFilterProxy.java:268)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:116)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:174)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:149)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:166)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:90)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:482)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:115)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:93)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:74)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:341)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:391)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:63)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:894)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1740)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:52)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:833)
+2023-09-26 04:53:13|[http-nio-8085-exec-3]|INFO |com.harshi.flightReservation.controllers.UserController-Inside showCompleteReservation() on ReservationController with flightId - 1
+2023-09-26 04:53:13|[http-nio-8085-exec-3]|INFO |com.harshi.flightReservation.controllers.UserController-Redirecting to completeReservation.html on ReservationController
+2023-09-26 04:53:20|[http-nio-8085-exec-4]|INFO |com.harshi.flightReservation.controllers.UserController-Inside completeReservation() on ReservationController with flightId - 1
+2023-09-26 04:53:20|[http-nio-8085-exec-4]|INFO |com.harshi.flightReservation.controllers.UserController-Inside bookFlight() on ReservationServiceImpl
+2023-09-26 04:53:20|[http-nio-8085-exec-4]|INFO |com.harshi.flightReservation.controllers.UserController-Reservation saved - Reservation Details:
+Checked In: false
+Number of Bags: 0
+Passenger: Passenger Information:
+First Name: Harshikesh
+Middle Name: null
+Last Name: Dubey
+Email: learningpandit@gmail.com
+Phone: 7980140018
+Flight: Flight Details:
+Flight Number: AA1
+Operating Airlines: American Airlines
+Departure City: NYC
+Arrival City: AUS
+Date of Departure: 2018-02-05
+Estimated Departure Time: 2018-02-05 03:14:07.0
+2023-09-26 04:53:20|[http-nio-8085-exec-4]|INFO |com.harshi.flightReservation.controllers.UserController-Inside generateItinerary() on PdfGenerator
+2023-09-26 04:53:21|[http-nio-8085-exec-4]|INFO |com.harshi.flightReservation.controllers.UserController-Inside sendItinerary() on EmailUtil
+2023-09-26 04:53:28|[http-nio-8085-exec-4]|INFO |com.harshi.flightReservation.controllers.UserController-Mail sent successfully to email - learningpandit@gmail.com
+2023-09-26 04:53:28|[http-nio-8085-exec-4]|INFO |com.harshi.flightReservation.controllers.UserController-Itinerary generated for Reservation with id - 43
+2023-09-26 04:53:28|[http-nio-8085-exec-4]|INFO |com.harshi.flightReservation.controllers.UserController-Redirecting to reservationConfirmationSummary.html on ReservationController
+2023-09-26 04:53:44|[http-nio-8085-exec-6]|INFO |com.harshi.flightReservation.controllers.UserController-Inside showLanding() on FlightController
+2023-09-26 04:53:49|[http-nio-8085-exec-7]|INFO |com.harshi.flightReservation.controllers.UserController-Inside getReservations()
+2023-09-26 04:53:53|[http-nio-8085-exec-9]|INFO |com.harshi.flightReservation.controllers.UserController-Inside showLanding() on FlightController
+2023-09-26 04:54:29|[http-nio-8085-exec-1]|INFO |com.harshi.flightReservation.controllers.UserController-Inside showLanding() on FlightController
+2023-09-26 04:54:35|[http-nio-8085-exec-3]|INFO |com.harshi.flightReservation.controllers.UserController-Inside showLanding() on FlightController
+2023-09-26 04:54:50|[http-nio-8085-exec-6]|INFO |com.harshi.flightReservation.controllers.UserController-Inside showRegistrationPage() on UserController
+2023-09-26 04:55:37|[http-nio-8085-exec-8]|INFO |com.harshi.flightReservation.controllers.UserController-Inside register() for user User Details:
+First Name: Nisha
+Last Name: Shaw
+Email: harshibabu604@gmail.comon UserController
+2023-09-26 04:55:37|[http-nio-8085-exec-8]|INFO |com.harshi.flightReservation.controllers.UserController-Redirecting to login.html on UserController
+2023-09-26 04:55:43|[http-nio-8085-exec-10]|INFO |com.harshi.flightReservation.controllers.UserController-Inside showLoginPage() with email - harshibabu604@gmail.comon UserController
+2023-09-26 04:55:43|[http-nio-8085-exec-10]|INFO |com.harshi.flightReservation.controllers.UserController-Redirecting to findFlights.html on UserController
+2023-09-26 04:55:46|[http-nio-8085-exec-1]|INFO |com.harshi.flightReservation.controllers.UserController-Inside getReservations()
+2023-09-26 04:55:48|[http-nio-8085-exec-2]|INFO |com.harshi.flightReservation.controllers.UserController-Inside showLanding() on FlightController
+2023-09-26 04:55:49|[http-nio-8085-exec-3]|INFO |com.harshi.flightReservation.controllers.UserController-Inside showLanding() on FlightController
+2023-09-26 04:55:56|[http-nio-8085-exec-5]|INFO |com.harshi.flightReservation.controllers.UserController-Inside findFlights() on FlightController
+2023-09-26 04:55:56|[http-nio-8085-exec-5]|INFO |com.harshi.flightReservation.controllers.UserController-Redirecting to displayFlights.html on flightController
+2023-09-26 04:55:57|[http-nio-8085-exec-6]|INFO |com.harshi.flightReservation.controllers.UserController-Inside showCompleteReservation() on ReservationController with flightId - 2
+2023-09-26 04:55:57|[http-nio-8085-exec-6]|INFO |com.harshi.flightReservation.controllers.UserController-Redirecting to completeReservation.html on ReservationController
+2023-09-26 04:56:10|[http-nio-8085-exec-8]|INFO |com.harshi.flightReservation.controllers.UserController-Inside completeReservation() on ReservationController with flightId - 2
+2023-09-26 04:56:10|[http-nio-8085-exec-8]|INFO |com.harshi.flightReservation.controllers.UserController-Inside bookFlight() on ReservationServiceImpl
+2023-09-26 04:56:10|[http-nio-8085-exec-8]|INFO |com.harshi.flightReservation.controllers.UserController-Reservation saved - Reservation Details:
+Checked In: false
+Number of Bags: 0
+Passenger: Passenger Information:
+First Name: Nisha
+Middle Name: null
+Last Name: Shaw
+Email: harshibabu604@gmail.com
+Phone: 7980140018
+Flight: Flight Details:
+Flight Number: AA2
+Operating Airlines: American Airlines
+Departure City: NYC
+Arrival City: AUS
+Date of Departure: 2018-02-05
+Estimated Departure Time: 2018-02-05 05:14:07.0
+2023-09-26 04:56:10|[http-nio-8085-exec-8]|INFO |com.harshi.flightReservation.controllers.UserController-Inside generateItinerary() on PdfGenerator
+2023-09-26 04:56:10|[http-nio-8085-exec-8]|INFO |com.harshi.flightReservation.controllers.UserController-Inside sendItinerary() on EmailUtil
+2023-09-26 04:56:17|[http-nio-8085-exec-8]|INFO |com.harshi.flightReservation.controllers.UserController-Mail sent successfully to email - harshibabu604@gmail.com
+2023-09-26 04:56:17|[http-nio-8085-exec-8]|INFO |com.harshi.flightReservation.controllers.UserController-Itinerary generated for Reservation with id - 44
+2023-09-26 04:56:17|[http-nio-8085-exec-8]|INFO |com.harshi.flightReservation.controllers.UserController-Redirecting to reservationConfirmationSummary.html on ReservationController
+2023-09-26 04:56:26|[http-nio-8085-exec-10]|INFO |com.harshi.flightReservation.controllers.UserController-Inside showLanding() on FlightController
+2023-09-26 04:57:52|[RMI TCP Connection(23)-127.0.0.1]|INFO |org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin-Application shutdown requested.
+2023-09-26 04:57:52|[RMI TCP Connection(23)-127.0.0.1]|INFO |org.apache.coyote.http11.Http11NioProtocol-Pausing ProtocolHandler ["http-nio-8085"]
+2023-09-26 04:57:52|[RMI TCP Connection(23)-127.0.0.1]|INFO |org.apache.catalina.core.StandardService-Stopping service [Tomcat]
+2023-09-26 04:57:52|[RMI TCP Connection(23)-127.0.0.1]|INFO |org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/flightreservation]-Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-09-26 04:57:52|[RMI TCP Connection(23)-127.0.0.1]|INFO |org.apache.coyote.http11.Http11NioProtocol-Stopping ProtocolHandler ["http-nio-8085"]
+2023-09-26 04:57:52|[RMI TCP Connection(23)-127.0.0.1]|INFO |org.apache.coyote.http11.Http11NioProtocol-Destroying ProtocolHandler ["http-nio-8085"]
+2023-09-26 04:57:52|[RMI TCP Connection(23)-127.0.0.1]|INFO |org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean-Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-26 04:57:52|[RMI TCP Connection(23)-127.0.0.1]|INFO |com.zaxxer.hikari.HikariDataSource-HikariPool-1 - Shutdown initiated...
+2023-09-26 04:57:52|[RMI TCP Connection(23)-127.0.0.1]|INFO |com.zaxxer.hikari.HikariDataSource-HikariPool-1 - Shutdown completed.
+2023-09-26 04:59:03|[main]|INFO |com.harshi.flightReservation.FlightReservationApplication-Starting FlightReservationApplication using Java 17.0.7 with PID 2536 (C:\Users\Admin\Downloads\codebase\flight\flightReservation\target\classes started by Admin in C:\Users\Admin\Downloads\codebase\flight\flightReservation)
+2023-09-26 04:59:03|[main]|INFO |com.harshi.flightReservation.FlightReservationApplication-No active profile set, falling back to 1 default profile: "default"
+2023-09-26 04:59:04|[main]|INFO |org.springframework.data.repository.config.RepositoryConfigurationDelegate-Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-26 04:59:05|[main]|INFO |org.springframework.data.repository.config.RepositoryConfigurationDelegate-Finished Spring Data repository scanning in 111 ms. Found 5 JPA repository interfaces.
+2023-09-26 04:59:06|[main]|INFO |org.springframework.boot.web.embedded.tomcat.TomcatWebServer-Tomcat initialized with port(s): 8085 (http)
+2023-09-26 04:59:06|[main]|INFO |org.apache.coyote.http11.Http11NioProtocol-Initializing ProtocolHandler ["http-nio-8085"]
+2023-09-26 04:59:06|[main]|INFO |org.apache.catalina.core.StandardService-Starting service [Tomcat]
+2023-09-26 04:59:06|[main]|INFO |org.apache.catalina.core.StandardEngine-Starting Servlet engine: [Apache Tomcat/10.1.12]
+2023-09-26 04:59:06|[main]|INFO |org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/flightreservation]-Initializing Spring embedded WebApplicationContext
+2023-09-26 04:59:06|[main]|INFO |org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext-Root WebApplicationContext: initialization completed in 2753 ms
+2023-09-26 04:59:06|[main]|INFO |org.hibernate.jpa.internal.util.LogHelper-HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-26 04:59:07|[main]|INFO |org.hibernate.Version-HHH000412: Hibernate ORM core version 6.2.7.Final
+2023-09-26 04:59:07|[main]|INFO |org.hibernate.cfg.Environment-HHH000406: Using bytecode reflection optimizer
+2023-09-26 04:59:07|[main]|INFO |org.hibernate.bytecode.internal.BytecodeProviderInitiator-HHH000021: Bytecode provider name : bytebuddy
+2023-09-26 04:59:07|[main]|INFO |org.springframework.orm.jpa.persistenceunit.SpringPersistenceUnitInfo-No LoadTimeWeaver setup: ignoring JPA class transformer
+2023-09-26 04:59:07|[main]|INFO |com.zaxxer.hikari.HikariDataSource-HikariPool-1 - Starting...
+2023-09-26 04:59:08|[main]|INFO |com.zaxxer.hikari.pool.HikariPool-HikariPool-1 - Added connection com.mysql.cj.jdbc.ConnectionImpl@516c20de
+2023-09-26 04:59:08|[main]|INFO |com.zaxxer.hikari.HikariDataSource-HikariPool-1 - Start completed.
+2023-09-26 04:59:08|[main]|INFO |org.hibernate.bytecode.internal.BytecodeProviderInitiator-HHH000021: Bytecode provider name : bytebuddy
+2023-09-26 04:59:10|[main]|INFO |org.hibernate.engine.transaction.jta.platform.internal.JtaPlatformInitiator-HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-26 04:59:10|[main]|INFO |org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean-Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-26 04:59:10|[main]|INFO |org.springframework.data.jpa.repository.query.QueryEnhancerFactory-Hibernate is in classpath; If applicable, HQL parser will be used.
+2023-09-26 04:59:12|[main]|WARN |org.springframework.boot.autoconfigure.orm.jpa.JpaBaseConfiguration$JpaWebConfiguration-spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-26 04:59:12|[main]|INFO |org.springframework.boot.autoconfigure.web.servlet.WelcomePageHandlerMapping-Adding welcome page template: index
+2023-09-26 04:59:12|[main]|INFO |org.springframework.security.web.DefaultSecurityFilterChain-Will secure any request with [org.springframework.security.web.session.DisableEncodeUrlFilter@56a34c0e, org.springframework.security.web.context.request.async.WebAsyncManagerIntegrationFilter@16750a5e, org.springframework.security.web.context.SecurityContextHolderFilter@289fff3c, org.springframework.security.web.header.HeaderWriterFilter@2940eec0, org.springframework.security.web.authentication.logout.LogoutFilter@6314e967, org.springframework.security.web.savedrequest.RequestCacheAwareFilter@669ae205, org.springframework.security.web.servletapi.SecurityContextHolderAwareRequestFilter@40bac624, org.springframework.security.web.authentication.AnonymousAuthenticationFilter@436867c3, org.springframework.security.web.access.ExceptionTranslationFilter@2f341732, org.springframework.security.web.access.intercept.AuthorizationFilter@4540aade]
+2023-09-26 04:59:13|[main]|INFO |org.apache.coyote.http11.Http11NioProtocol-Starting ProtocolHandler ["http-nio-8085"]
+2023-09-26 04:59:13|[main]|INFO |org.springframework.boot.web.embedded.tomcat.TomcatWebServer-Tomcat started on port(s): 8085 (http) with context path '/flightreservation'
+2023-09-26 04:59:13|[main]|INFO |com.harshi.flightReservation.FlightReservationApplication-Started FlightReservationApplication in 10.087 seconds (process running for 11.752)
+2023-09-26 04:59:50|[http-nio-8085-exec-2]|INFO |org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/flightreservation]-Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-26 04:59:50|[http-nio-8085-exec-2]|INFO |org.springframework.web.servlet.DispatcherServlet-Initializing Servlet 'dispatcherServlet'
+2023-09-26 04:59:50|[http-nio-8085-exec-2]|INFO |org.springframework.web.servlet.DispatcherServlet-Completed initialization in 2 ms
+2023-09-26 04:59:55|[http-nio-8085-exec-4]|INFO |com.harshi.flightReservation.controllers.UserController-Inside to showLoginPage() on UserController
+2023-09-26 05:00:00|[http-nio-8085-exec-5]|INFO |com.harshi.flightReservation.controllers.UserController-Inside showLoginPage() with email - harshibabu604@gmail.comon UserController
+2023-09-26 05:00:01|[http-nio-8085-exec-5]|INFO |com.harshi.flightReservation.controllers.UserController-Redirecting to findFlights.html on UserController
+2023-09-26 05:00:04|[http-nio-8085-exec-7]|INFO |com.harshi.flightReservation.controllers.UserController-Inside showLanding() on FlightController
+2023-09-26 05:00:10|[http-nio-8085-exec-8]|INFO |com.harshi.flightReservation.controllers.UserController-Inside to showLoginPage() on UserController
+2023-09-26 05:00:19|[http-nio-8085-exec-10]|INFO |com.harshi.flightReservation.controllers.UserController-Inside showLoginPage() with email - harshibabu604@gmail.comon UserController
+2023-09-26 05:00:19|[http-nio-8085-exec-10]|INFO |com.harshi.flightReservation.controllers.UserController-Redirecting to findFlights.html on UserController
+2023-09-26 05:00:46|[http-nio-8085-exec-5]|INFO |com.harshi.flightReservation.controllers.UserController-Inside to showLoginPage() on UserController
+2023-09-26 05:00:57|[http-nio-8085-exec-7]|INFO |com.harshi.flightReservation.controllers.UserController-Inside showLoginPage() with email - learningpandit@gmail.comon UserController
+2023-09-26 05:00:57|[http-nio-8085-exec-7]|INFO |com.harshi.flightReservation.controllers.UserController-Redirecting to findFlights.html on UserController
+2023-09-26 05:01:22|[http-nio-8085-exec-10]|INFO |com.harshi.flightReservation.controllers.UserController-Inside to showLoginPage() on UserController
+2023-09-26 05:01:24|[http-nio-8085-exec-2]|INFO |com.harshi.flightReservation.controllers.UserController-Inside showLoginPage() with email - learningpandit@gmail.comon UserController
+2023-09-26 05:01:24|[http-nio-8085-exec-2]|INFO |com.harshi.flightReservation.controllers.UserController-Redirecting to findFlights.html on UserController
+2023-09-26 05:01:25|[http-nio-8085-exec-1]|INFO |com.harshi.flightReservation.controllers.UserController-Inside showLanding() on FlightController
+2023-09-26 05:03:53|[http-nio-8085-exec-4]|INFO |com.harshi.flightReservation.controllers.UserController-Inside to showLoginPage() on UserController
+2023-09-26 05:03:55|[http-nio-8085-exec-5]|INFO |com.harshi.flightReservation.controllers.UserController-Inside showLoginPage() with email - learningpandit@gmail.comon UserController
+2023-09-26 05:03:55|[http-nio-8085-exec-5]|INFO |com.harshi.flightReservation.controllers.UserController-Redirecting to findFlights.html on UserController
+2023-09-26 05:03:59|[http-nio-8085-exec-7]|INFO |com.harshi.flightReservation.controllers.UserController-Inside to showLoginPage() on UserController
+2023-09-26 05:04:06|[http-nio-8085-exec-9]|INFO |com.harshi.flightReservation.controllers.UserController-Inside showLoginPage() with email - Helloworld@gmail.comon UserController
+2023-09-26 05:04:09|[http-nio-8085-exec-10]|INFO |com.harshi.flightReservation.controllers.UserController-Inside to showLoginPage() on UserController
+2023-09-26 05:04:15|[http-nio-8085-exec-1]|INFO |com.harshi.flightReservation.controllers.UserController-Inside showLoginPage() with email - harshibabu604@gmail.comon UserController
+2023-09-26 05:04:15|[http-nio-8085-exec-1]|INFO |com.harshi.flightReservation.controllers.UserController-Redirecting to findFlights.html on UserController
+2023-09-26 05:04:24|[http-nio-8085-exec-5]|INFO |com.harshi.flightReservation.controllers.UserController-Inside to showLoginPage() on UserController
+2023-09-26 05:04:37|[http-nio-8085-exec-7]|INFO |com.harshi.flightReservation.controllers.UserController-Inside showLoginPage() with email - harshibabu604@gmail.comon UserController
+2023-09-26 05:04:37|[http-nio-8085-exec-7]|INFO |com.harshi.flightReservation.controllers.UserController-Redirecting to findFlights.html on UserController
+2023-09-26 05:05:19|[http-nio-8085-exec-10]|INFO |com.harshi.flightReservation.controllers.UserController-Inside to showLoginPage() on UserController
+2023-09-26 05:05:24|[http-nio-8085-exec-1]|INFO |com.harshi.flightReservation.controllers.UserController-Inside showLoginPage() with email - harshibabu604@gmail.comon UserController
+2023-09-26 05:05:24|[http-nio-8085-exec-1]|INFO |com.harshi.flightReservation.controllers.UserController-Redirecting to findFlights.html on UserController
+2023-09-26 05:07:49|[http-nio-8085-exec-7]|INFO |com.harshi.flightReservation.controllers.UserController-Inside to showLoginPage() on UserController
+2023-09-26 05:07:50|[http-nio-8085-exec-8]|INFO |com.harshi.flightReservation.controllers.UserController-Inside showLoginPage() with email - harshibabu604@gmail.comon UserController
+2023-09-26 05:07:51|[http-nio-8085-exec-8]|INFO |com.harshi.flightReservation.controllers.UserController-Redirecting to findFlights.html on UserController
+2023-09-26 05:08:12|[http-nio-8085-exec-2]|INFO |com.harshi.flightReservation.controllers.UserController-Inside to showLoginPage() on UserController
+2023-09-26 05:08:14|[http-nio-8085-exec-3]|INFO |com.harshi.flightReservation.controllers.UserController-Inside showLoginPage() with email - harshibabu604@gmail.comon UserController
+2023-09-26 05:08:14|[http-nio-8085-exec-3]|INFO |com.harshi.flightReservation.controllers.UserController-Redirecting to findFlights.html on UserController
+2023-09-26 05:08:38|[http-nio-8085-exec-7]|INFO |com.harshi.flightReservation.controllers.UserController-Inside to showLoginPage() on UserController
+2023-09-26 05:08:48|[http-nio-8085-exec-9]|INFO |com.harshi.flightReservation.controllers.UserController-Inside showLoginPage() with email - learningpandit@gmail.comon UserController
+2023-09-26 05:08:48|[http-nio-8085-exec-9]|INFO |com.harshi.flightReservation.controllers.UserController-Redirecting to findFlights.html on UserController
+2023-09-26 05:10:55|[RMI TCP Connection(20)-127.0.0.1]|INFO |org.springframework.boot.admin.SpringApplicationAdminMXBeanRegistrar$SpringApplicationAdmin-Application shutdown requested.
+2023-09-26 05:10:55|[RMI TCP Connection(20)-127.0.0.1]|INFO |org.apache.coyote.http11.Http11NioProtocol-Pausing ProtocolHandler ["http-nio-8085"]
+2023-09-26 05:10:55|[RMI TCP Connection(20)-127.0.0.1]|INFO |org.apache.catalina.core.StandardService-Stopping service [Tomcat]
+2023-09-26 05:10:55|[RMI TCP Connection(20)-127.0.0.1]|INFO |org.apache.catalina.core.ContainerBase.[Tomcat].[localhost].[/flightreservation]-Destroying Spring FrameworkServlet 'dispatcherServlet'
+2023-09-26 05:10:55|[RMI TCP Connection(20)-127.0.0.1]|INFO |org.apache.coyote.http11.Http11NioProtocol-Stopping ProtocolHandler ["http-nio-8085"]
+2023-09-26 05:10:55|[RMI TCP Connection(20)-127.0.0.1]|INFO |org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean-Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-26 05:10:55|[RMI TCP Connection(20)-127.0.0.1]|INFO |com.zaxxer.hikari.HikariDataSource-HikariPool-1 - Shutdown initiated...
+2023-09-26 05:10:55|[RMI TCP Connection(20)-127.0.0.1]|INFO |com.zaxxer.hikari.HikariDataSource-HikariPool-1 - Shutdown completed.
